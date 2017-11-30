@@ -149,7 +149,7 @@ $(document).ready(function(){
     let firstPipe = pipes[0];
     // If the player is within the hit zone
     if(player.x + player.size >= firstPipe.pipeX - 5 && player.x <= firstPipe.pipeX - 5 + PIPE_TOP_WIDTH){
-      if(!(player.y >= firstPipe.pipeY - PIPE_SPACE && player.y <= firstPipe.pipeY + PIPE_SPACE)){
+      if(!(player.y >= firstPipe.pipeY - PIPE_SPACE && player.y + player.size <= firstPipe.pipeY + PIPE_SPACE)){
         gameOver = true;
       }
     }
